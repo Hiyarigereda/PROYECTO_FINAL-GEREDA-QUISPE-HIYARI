@@ -1,0 +1,29 @@
+---
+title: "Semana 6"
+author: "GEREDA QUISPE HIYARI"
+format: html
+editor: visual
+---
+
+## SEMANA 6: COMO LIMPIAR UNA DATA PARA UTILIZAR UNA COLUMNA ESPECIFICA
+
+```{r}
+#Paso 1: En RSTUDIO damos click en From Text(readr)
+```
+
+```{r}
+#PASO 2: Luego copiamos el texto inferior de color verde debido a que vamos a crear una nueva data para poder limpiar.
+
+```
+
+```{r}
+#Paso 3: Nos dirigimos a la ventana de edición y pegamos el texto
+#CARGAR DATA NUEVA 
+data<- read.csv("C:/Users/gered/Downloads/s02_treat_artritis.csv")
+```
+
+```{r}
+#Paso 4: realizamos la limpieza de la data con el siguiente código
+#LIMPIAR DATA 
+data_limpia<-data[!is.na(data$CDAI),]
+```

@@ -1,0 +1,33 @@
+---
+title: "SEMANA 4"
+author: "GEREDA QUISPE HIYARI"
+format: html
+editor: visual
+---
+
+## COMO DESCARGAR UN ARCHIVO EN FORMATO CSV DEL REPOSITORIO GIBHUB.
+
+```{r}
+#PASO 1: Me dirijo a la guía practica del curso
+```
+
+```{r}
+#PASO 2: Me dirijo al repositorio en la siguiente dirección:https://github.com/KJPaez1/Basic_Stat_Methods
+
+```
+
+```{r}
+#PASO 3: hacer click en la carpeta Data 
+```
+
+```{r}
+#PASO 4: Nos dirigimos al archivo de CSV
+```
+
+```{r}
+#PASO 5: Damos click en el icono de descarga 
+```
+
+```{r}
+#PASO 6: listo la descarga se realizo de forma correcta 
+```

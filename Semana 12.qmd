@@ -1,0 +1,67 @@
+---
+title: "Semana 12"
+author: "Gereda Quispe Hiyari"
+format: html
+editor: visual
+---
+
+## SEMANA 12: Calcular las medidas de dispersión (varianza, desviación estándar, rango, rango intercuartílico) y de Posición (Cuartiles), script para visualizar las 6 primeras filas y para visualizar un resumen de dichas medidas
+
+***#Paso 1: Primero vamos a importar el archivo con el que vamos a trabajar***
+
+```{r}
+#IMPORTAR EL ARCHIVO CON EL CUAL SE VA A TRABAJAR 
+data <- read_csv("C:/Users/gered/Downloads/s13_hemodialisis (1).csv")
+```
+
+***#Paso 2: calculamos la varianza (Var), en la parte de la consola aparecerá el resultado***
+
+```{r}
+#MEDIDAS DE DISPERSIÓN
+#VARIANZA
+var(data$Edad,na.rm = TRUE)
+```
+
+***#Paso 3: Calculamos la desviación estándar (sd), de igual forma en la parte de la consola aparece el resultado.***
+
+```{r}
+#DESVIACIÓN ESTANDAR 
+sd(data$Edad,na.rm = TRUE)
+```
+
+***#Paso 4: calculamos el rango, de igual forma el resultado aparecerá en la parte de la consola***
+
+```{r}
+#RANGO
+range(data$Edad,na.rm = TRUE)
+```
+
+***#Paso 5: calculamos el rangp intercuartílico, de igual forma el resultado aparecerá en la parte de la consola***
+
+```{r}
+#RANGO INTERCUARTILICO 
+IQR(data$Edad,na.rm = TRUE)
+```
+
+***#MEDIDAS DE POSICIÓN***
+
+***#Paso 1: calculamos el cuartil de igual forma el resultado aparecerá en la parte de la consola***
+
+```{r}
+#RESquantile(data$Edad,probs = c(0.25,0.50,0.75,0.90),na.rm = TRUE)
+summary(data$Edad)
+```
+
+***#Paso 2: Visualizar las 6 primeras filas de la data***
+
+```{r}
+#VER LAS 6 PRIMERAS FILAS DE LA DATA
+head(data)
+```
+
+***#Paso 3: resumen de todas las variables***
+
+```{r}
+#SUMEN DE TODAS LAS VARIBLES
+summary(data)
+```

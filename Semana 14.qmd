@@ -1,0 +1,84 @@
+---
+title: "Semana 14"
+author: "GEREDA QUISPE HIYARI"
+format: html
+editor: visual
+---
+
+## Realiza el analisis de Regresión, Analisis univariado, Multivariado 
+
+# UNIVARIADO
+
+Paso 1:
+
+#3.1 Cargar datos (crearemos un dataset simulado)
+
+```{r}
+# Dataset simulado
+  set.seed(123)
+  n <- 100
+  IMC <- rnorm(n, 27, 4)
+  PAS <- 90 + 1.5*IMC + rnorm(n, 0, 8)
+  datos <- data.frame(IMC, PAS)
+  head(datos)
+```
+
+#Paso 2:
+
+***#3.2 Ajustar modelo***
+
+```{r}
+modelo_uni <- lm(PAS ~ IMC, data = datos)
+  summary(modelo_uni)
+```
+
+#Paso 3:
+
+***#3.4 Gráfico***
+
+```{r}
+plot(datos$IMC, datos$PAS, main="PAS vs IMC", xlab="IMC", ylab="PAS")
+  abline(modelo_uni, lwd=2)
+```
+
+# MULTIVARIADO:
+
+***#4.1 Dataset simulado***
+
+```{r}
+set.seed(123)
+  n <- 120
+  
+  IMC <- rnorm(n, 27, 4)
+  Edad <- rnorm(n, 45, 10)
+  Actividad <- rnorm(n, 3, 1)   # horas por semana
+  
+  # Modelo real para generar datos
+  PAS <- 80 + 1.2*IMC + 0.6*Edad - 2.5*Actividad + rnorm(n, 0, 10)
+  
+  datos2 <- data.frame(IMC, Edad, Actividad, PAS)
+  head(datos2)
+  
+```
+
+***#4.2 Ajustar modelo múltiple***
+
+```{r}
+modelo_multi <- lm(PAS ~ IMC + Edad + Actividad, data = datos2)
+  summary(modelo_multi)
+```
+
+***#4.4 Comparar modelos***
+
+```{r}
+anova(modelo_uni,modelo_multi)
+```
+
+*#Para este caso no aplica por que no todos los modelos se ajustaron al mismo tamaño de conjunto de datos.*
+
+***#4.5 Diagnóstico del modelo (muy importante)***
+
+```{r}
+par(mfrow=c(2,2))
+  plot(modelo_multi)
+```

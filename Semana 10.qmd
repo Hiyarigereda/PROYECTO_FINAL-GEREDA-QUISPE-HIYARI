@@ -1,0 +1,39 @@
+---
+title: "Semana 10"
+author: "Gereda Quispe Hiyari"
+format: html
+editor: visual
+---
+
+## SEMANA 10: CALCULAR LAS MEDIDAS DE TENDENCIA CENTRAL (MEDIA ARIMETICA, MEDIANA, MODA
+
+***#Paso 1: Importar el archivo con el cual se va a trabajar***
+
+```{r}
+#IMPORTAR EL ARCHIVO CON EL CUAL SE VA A TRABAJAR 
+data <- read_csv("C:/Users/gered/Downloads/s13_hemodialisis (1).csv")
+```
+
+***#MEDIDAS DE TENDENCIA CENTRAL***
+
+***#Paso 2: Empezamos a calcular las medidas de tendencia central, comenzamos con media arimetica debemos colocar mean seguidamente data porque es con la que estamos trabajando. Colocamos (\$) porque trabajaremos solo con la categoría de edad. En la parte de la consola aparecerá la respuesta.***
+
+```{r}
+#MEDIA ARIMETICA
+mean(data$Edad)
+```
+
+***#Paso 3: Calculamos la mediana para eso colocamos median, data y (\$) edad, ya que es la categoría que estamos trabajando. En la parte de la consola aparecerá la respuesta.***
+
+```{r}
+#MEDIANA
+median(data$Edad)
+```
+
+***#Paso 4: calcular Moda***
+
+```{r}
+#MODA
+mode_Edad<-names(sort(table(data$Edad),decreasing = TRUE))
+
+```
