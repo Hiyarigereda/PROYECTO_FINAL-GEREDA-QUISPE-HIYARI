@@ -1,1 +1,19 @@
+---
+title: "SEMANA 8"
+author: "GEREDA QUISPE HIYARI"
+format: html
+editor: visual
+---
 
+## INSTALAMOS UN PAQUETE
+
+```{r}
+install.packages("survival")
+library("survival")
+```
+
+```{r}
+#VISUALIZACIONES GRAFICAS
+#HISTOGRAMA
+ggplot(data, aes(x= IMC))+geom_histogram(bins = 30)+theme_minimal()
+```
